@@ -1,0 +1,232 @@
+// Color Theme Variables
+$greenTheme: #99FF99;
+$whiteTheme: white;
+$blueTheme: #87CEEB;
+
+* {
+    margin: 0px;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    background-color: $blueTheme;
+    height: 2.5rem;
+
+    img {
+        height: 2.5rem;
+    }
+
+    nav {
+        display: flex;
+        width: 45%;
+        a {
+            text-decoration: none;
+            background-color: $greenTheme;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        a:hover {
+            background-color: $whiteTheme;
+            transition: 1s;
+        }
+    }
+}
+
+
+.heroBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    opacity: 0.8;
+    background-image: url("../images/hero_banner_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    p {
+        text-align: center;
+        font-size: larger;
+        font-weight:bolder;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+}
+
+main {
+    padding: 2rem 0rem 2rem 0rem;
+    background-color: $blueTheme;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    a {
+        -webkit-transition: scale 1s;
+        border-radius: 20px;
+        border: solid 1px;
+        text-decoration: none;
+        color: black;
+        height: 50vh;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25%;
+        margin: 1rem;
+        box-shadow: 5px 5px 10px;
+        h2 {
+            background-color: $greenTheme;
+            padding: 0.5rem;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+        p {
+            background-color: $blueTheme;
+            padding: 0.5rem;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+    }
+    a:hover {
+        scale: 1.1;
+        transition: 1s;
+    }
+    
+    a:nth-child(1) {
+        background-image: url("../images/poersonale.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    a:nth-child(2) {
+        background-image: url("../images/kalender.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    a:nth-child(3) {
+        background-image: url("../images/kort.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+// Find os content
+
+.wrapper {
+    width: 95vw;
+    background-color: $whiteTheme;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 125vh;
+
+    div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 5vh;
+        margin-top: 1rem;
+    }
+
+    section {
+        display: flex;
+        justify-content:space-evenly;
+        article {
+            margin: 2rem;
+            background-color: $greenTheme;
+            padding: 1.5rem;
+        }
+    }
+
+    #map {
+        height: 100vh;
+        margin: 2rem;
+    }
+
+}
+
+// Personale content
+
+.personaleWrapper {
+    display: flex;
+    margin: 2.5rem 0rem 2.5rem 0rem; 
+    justify-content: space-evenly;
+    article {
+        -webkit-transition: scale 1s;
+        width: 25%;
+        text-align: center;
+        color: $whiteTheme;
+        img {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+    article:hover {
+        scale: 1.1;
+        transition: 1s;
+    }
+}
+
+// Bestil tid content
+
+.bestilWrapper {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 50vw;
+
+    article {
+        display: flex;
+        width: 60vw;
+        color: $whiteTheme;
+        gap: 5vw;
+        p {
+            font-size: larger;
+        }
+        #telefontider {
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: 30vh;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 25vh;
+                }
+
+            }
+
+        }
+    }
+
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    background-color: lightgray;
+    p {
+        text-align: center;
+    }
+}
+
+.leaflet-right, .leaflet-left {
+    display: none !important;
+}
