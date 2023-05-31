@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VisioMax Øjenlæger Bestil tid</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/burgermenu.js" defer></script>
 </head>
 <body>
     <header>
         <div class="navBar">
             <a href="index.html"><img src="images/VisioMax_logo.webp" alt="VisioMax Øjenlæger logo"></a>
-            <nav>
+            <nav class="menu">
                 <a href="index.html">Forside</a>
                 <a href="personale.html">Personale</a>
                 <a href="bestil_tid.html">Bestil tid</a>
                 <a href="find_os.html">Find os</a>
             </nav>
+            <button class="toggle-button">&#9776;</button>
         </div>
     </header>
     <main>
@@ -24,7 +26,7 @@
            <article>
                 <h2>Tidsbestilling:</h2>
                 <div id="telefontider">
-                    <p>Tidsbestilling foregår på telefonnummeret 23 41 50 87.</p>
+                    <p>Bestil en tid på telefonnummeret 23 41 50 87.</p>
                     <div>
                         <p>Telefontider</p>
                         <ul>
@@ -35,6 +37,19 @@
                             <li>Fredag: kl 8 - 10</li>
                         </ul>
                     </div>
+                    <div id="formtider">
+                        <p>Eller udfyld formlen, så sender vi dig en tid via sms</p>
+                        <p>BEMÆRK Hvis det er akut skal du ringe på telefonnummeret: 23 41 50 87</p>
+                        <form action="">
+                            <label for="fornavn">Fornavn:</label>
+                            <input type="text" id="fornavn" name="fornavn">
+                            <label for="efternavn">Efternavn:</label>
+                            <input type="text" id="efternavn" name="efternavn">
+                            <label for="cprnummer">CPR-nummer:</label>
+                            <input type="text" id="cprnummer" name="cprnummer">
+                            <button type="submit" id="submit" name="submit">Send</button>
+                        </form>
+                    </div>
                 </div>
            </article>
            <article>
@@ -44,5 +59,7 @@
         </div>
     </main>
     <footer>
-        <p>Stengaden 47, 7100 Vejle</p>
+        <div></div>
+        <div><p>Stengaden 47, 7100 Vejle</p></div>
+        <div></div>
     </footer>
