@@ -86,7 +86,7 @@ main {
         text-align: center;
         flex-direction: column;
         justify-content: space-between;
-        width: 30%;
+        width: 25%;
         margin: 1rem;
         box-shadow: 5px 5px 10px;
         h2 {
@@ -135,8 +135,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-    height: auto;
+    height: 125vh;
 
     div {
         display: flex;
@@ -157,8 +156,7 @@ main {
     }
 
     #map {
-        width: 60%;
-        height: 55vh;
+        height: 100vh;
         margin: 2rem;
     }
 
@@ -276,15 +274,6 @@ footer {
 // media screen large (992px)
 
 @media only screen and (max-width: 992px) {
-    
-    footer {
-        img {
-            position: relative;
-        }
-    }
-
-    //Forside
-
     .slideshow-container {
         height: auto;
     }
@@ -295,18 +284,12 @@ footer {
             width: 40%;
         }
     }
-
-    //Personale
-
     .personaleWrapper {
         flex-wrap: wrap;
         article {
             width: 55%;
         }
     }
-
-    //Bestil tid
-
     .bestilWrapper {
         justify-content: space-between;
         article {
@@ -319,29 +302,17 @@ footer {
 // media screen medium (768px)
 
 @media only screen and (max-width: 768px) {
-    
-    footer {
-        flex-direction: column;
-    }
-    
     // Forside
     main {
         a{
-            width: 65%;
+            width: 50%;
         }
     }
     .menu {
-        transition: all 1.5s;
-        position: absolute;
-        right: -100%;
-        top: 5%;
-        z-index: 9999;
-        display: block !important;
-        width: 20vh !important;
-        a {
-            height: 2.5rem;
-            border-bottom: 2px solid black;
-        }
+        display: none !important;
+        animation-name: slide;
+        animation-duration: 1.5s;
+        transition: translateX(100%);
     }
 
     .toggle-button {
@@ -351,37 +322,12 @@ footer {
     /* Vertical menu styles */
     .menu.show-menu {
         z-index: 9999;
-        right: 0%;
-        // animation-name: slide;
-        // animation-duration: 1.5s;
+        position: absolute;
+        right: 0;
+        top: 35px;
+        display: block !important;
     }
     
-    // Bestil tid
-
-    .bestilWrapper {
-        height: 110vh;
-
-    }
-    
-    //Find os
-
-    .wrapper {
-        section {
-            flex-wrap: wrap;
-        }
-        #map {
-            width: 90vw;
-            height: 45vh;
-        }
-    }
-
-}
-
-@media only screen and (max-width: 425px) {
-    .menu {
-        display: flex !important;
-        width: 100% !important;
-    }
 }
 
 body {font-family: Verdana, sans-serif;}
@@ -445,8 +391,8 @@ img {vertical-align: middle;}
 }
 
 @keyframes slide {
-    from {transform: translateX(100%);}
-    to {transform: translateX(0%);}
+    from {transform: translateY(-100%);}
+    to {transform: translateY(0%);}
 }
 
 /* On smaller screens, decrease text size */
